@@ -1,0 +1,173 @@
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  --off-white: #fafafa;
+  --off-grey: #ededed;
+  --dark-bg: #252525;
+  --text-primary: #0f172a;
+  --brand-secondary: #334155;
+  --brand-accent: #245ca6;
+  --brand-cta: #f29966;
+  --brand-dark: #310e0e;
+  --delivered: #59c500;
+  --site-max-width: 1280px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-outfit), Outfit, Arial, sans-serif;
+  background: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+main,
+header {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 20px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 980px) {
+  .wrapper {
+    padding: 40px 20px;
+  }
+}
+
+.wrapper:nth-child(even) {
+  background: var(--off-grey);
+}
+
+.wrapper:nth-child(odd) {
+  background: var(--off-white);
+}
+
+section {
+  position: relative;
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+}
+
+.aligntext-left {
+  text-align: left;
+}
+
+.aligntext-center {
+  text-align: center;
+}
+
+.aligntext-right {
+  text-align: right;
+}
+
+h2 {
+  text-wrap: balance;
+  font-weight: 500;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1;
+  margin: 0 0 25px;
+}
+
+h2 strong {
+  font-weight: 600;
+  color: var(--brand-accent);
+}
+
+h3 {
+  text-wrap: balance;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.6vw, 1.75rem);
+  line-height: 1;
+  margin: 0 0 7px;
+}
+
+.block-copy {
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+}
+ p {
+  margin: 0 0 18px;
+  line-height: 1.3;
+  text-align: inherit;
+}
+
+ p:last-child {
+  margin: 0 0 0;
+}
+
+.content table,
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  background: var(--off-grey);
+  border: 1px solid var(--brand-secondary);
+  overflow: hidden;
+}
+
+.content th,
+.content td,
+.table th,
+.table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--brand-secondary);
+}
+
+.content thead th,
+.table thead th {
+  background: var(--brand-secondary);
+  color: var(--off-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.content tbody tr:last-child td,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.content tbody tr:hover,
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+@media screen and (max-width: 640px) {
+  .content table,
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.highlight {
+  color: var(--brand-accent);
+  font-weight: 600;
+}

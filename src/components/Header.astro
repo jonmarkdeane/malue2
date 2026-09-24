@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/maluelogo.svg';
+import Nav from './Nav.astro';
+
+---
+
+<header class="site-header">
+  <div class="header-wrapper">
+    <a class="logo" href="./">
+      <!-- <Image src={logo} alt="Malue logo" width={200} /> -->
+    </a>
+
+    <Nav />
+  </div>
+</header>
+
+<style>
+  .site-header {
+	width: 100%;
+	background: var(--off-white);
+    border-bottom: 1px solid rgba(16, 21, 35, 0.08);
+	padding: 0 20px;
+  }
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+	align-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: min(100%, var(--site-max-width));
+    margin: 0 auto;
+	padding: 20px 0;
+  }
+
+  .logo {
+    display: inline-flex;
+    text-decoration: none;
+  }
+
+  .logo img {
+    display: block;
+    width: auto;
+    height: 90px;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .logo img {
+      height: 60px;
+    }
+  }
+</style>
