@@ -1,4 +1,5 @@
 ---
+import CtaButton from './CtaButton.astro';
 ---
 <div class="nav-container">
   <input
@@ -50,7 +51,7 @@
         </div>
       </details>
     </div>
-    <a href="/contact" class="cta-button">Partner With Us</a>
+    <CtaButton href="/contact" label="Partner With Us" />
   </nav>
 </div>
 
@@ -62,6 +63,8 @@
     height: 0;
     pointer-events: none;
   }
+
+  
 
   .menu-button {
     display: none;
@@ -80,7 +83,7 @@
     width: 100%;
     height: 3px;
     border-radius: 999px;
-    background: #111827;
+    background: var(--off-white);
   }
 
   .nav-container {
@@ -96,6 +99,7 @@
     min-width: 0;
   }
 
+
   .nav-links {
     display: flex;
     align-items: center;
@@ -106,7 +110,7 @@
   }
 
   .nav-link a {
-    color: var(--text-primary);
+    color: var(--off-white);
     text-decoration: none;
   }
 
@@ -128,7 +132,7 @@
     font-size: 1.6rem;
     display: inline-block;
     transform: translateY(1px);
-    color: var(--brand-accent);
+  color: var(--off-white); 
   }
 
   .nav-group[open] .nav-summary::after {
@@ -189,7 +193,6 @@
 
   .nav-link {
     text-decoration: none;
-    color: #334155;
     font-weight: 500;
   }
 
@@ -197,27 +200,8 @@
   .nav-link:focus-visible,
   .nav-summary:hover,
   .nav-summary:focus-visible {
-    color: #334155;
+    color: var(--off-white);
     text-decoration: none;
-  }
-
-  .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 18px;
-    border-radius: 999px;
-    background: var(--brand-cta);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-  }
-
-  .cta-button:hover,
-  .cta-button:focus-visible {
-    background: #b5b5b5;
-    transform: translateY(-1px);
   }
 
   @media screen and (max-width: 960px) {
@@ -263,11 +247,6 @@
       display: inline-flex;
       justify-content: space-between;
       padding: 12px 0;
-    }
-
-    .cta-button {
-      width: 100%;
-      justify-content: center;
     }
 
     .nav-group {

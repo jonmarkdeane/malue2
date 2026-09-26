@@ -13,6 +13,7 @@
   --brand-dark: #310e0e;
   --delivered: #59c500;
   --site-max-width: 1280px;
+  --news-strip-height: 40px;
 }
 *,
 *::before,
@@ -31,7 +32,7 @@ body {
 
 body {
   font-family: var(--font-outfit), Outfit, Arial, sans-serif;
-  background: var(--dark-bg);
+  background: var(--off-white);
   color: var(--text-primary);
 }
 
@@ -64,11 +65,11 @@ header {
   background: var(--off-white);
 }
 
-section {
+/* section {
   position: relative;
   max-width: var(--site-max-width);
   margin: 0 auto;
-}
+} */
 
 .aligntext-left {
   text-align: left;
@@ -81,6 +82,7 @@ section {
 .aligntext-right {
   text-align: right;
 }
+
 
 h2 {
   text-wrap: balance;

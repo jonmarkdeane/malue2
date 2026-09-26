@@ -2,7 +2,8 @@
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Head from "@components/Head.astro";
-import ContactBug from "@components/ContactBug.astro";
+import homeHero from "../assets/heroes/temphero.png";
+import Hero from "@components/Hero.astro";
 import NewsStrip from "@components/NewsStrip.astro";
 import "@styles/global.css";
 ---
@@ -16,6 +17,7 @@ import "@styles/global.css";
     linktext = "Read more"
     href = "#" />
     <Header />
+    <Hero title="Helping healthcare adopt what works" image={homeHero} />
     <main id="start">
         <slot />
     </main>

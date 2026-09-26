@@ -1,0 +1,49 @@
+---
+interface Props {
+  message?: string;
+  linktext?: string;
+  href?: string;
+}
+
+const { message = "News item", linktext = "Read more", href } = Astro.props;
+---
+
+<aside class="news-strip" aria-label="News">
+  {message} <a href={href}><span>{linktext}</span></a>
+</aside>
+
+<style>
+  .news-strip {
+    padding: 12px;
+    background: #000;
+    color: var(--off-white);
+    font-size: 0.9rem;
+  }
+
+  .news-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .news-strip a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .news-strip a span::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 4px;
+  },
+
+  @media screen and (max-width: 640px) {
+    .news-strip {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 2px;
+      padding-block: 8px;
+    }
+  }
+</style>
