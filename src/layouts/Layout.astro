@@ -2,20 +2,42 @@
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Head from "@components/Head.astro";
-import ContactBug from "@components/ContactBug.astro";
-import NewsStrip from "@components/NewsStrip.astro";
 import "@styles/global.css";
+
+interface Props {
+  showNewsStrip?: boolean;
+  newsMessage?: string;
+  newsLinkText?: string;
+  newsHref?: string;
+  showHero?: boolean;
+  heroTitle?: string;
+  heroImage?: ImageMetadata;
+}
+
+const {
+  showNewsStrip = true,
+  newsMessage,
+  newsLinkText,
+  newsHref,
+  showHero = false,
+  heroTitle,
+  heroImage,
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <Head />
   <body>
-    <NewsStrip
-    message = "Malue is moving from research and validation towards commercial deployment, with adoption support at the centre of its platform model."
-    linktext = "Read more"
-    href = "#" />
-    <Header />
+    <Header
+      showNewsStrip={showNewsStrip}
+      newsMessage={newsMessage}
+      newsLinkText={newsLinkText}
+      newsHref={newsHref}
+      showHero={showHero}
+      heroTitle={heroTitle}
+      heroImage={heroImage}
+    />
     <main id="start">
         <slot />
     </main>

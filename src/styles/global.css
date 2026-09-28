@@ -4,6 +4,7 @@
 
 :root {
   --off-white: #fafafa;
+  --off-black: #252525;
   --off-grey: #ededed;
   --dark-bg: #252525;
   --text-primary: #0f172a;
@@ -14,7 +15,21 @@
   --delivered: #59c500;
   --site-max-width: 1280px;
   --news-strip-height: 40px;
+  --pad: 80px;
 }
+
+@media screen and (max-width: 980px) {
+  :root {
+    --pad: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --pad: 20px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -32,17 +47,17 @@ body {
 
 body {
   font-family: var(--font-outfit), Outfit, Arial, sans-serif;
-  background: var(--off-white);
+  background:var(--off-white);
   color: var(--text-primary);
 }
 
-main,
+/* main,
 header {
   display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 0;
-}
+} */
 
 .wrapper {
   box-sizing: border-box;

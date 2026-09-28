@@ -1,9 +1,16 @@
 ---
-import Layout from "@layouts/HeroLayout.astro";
-import Hero from "@components/Hero.astro";
+import Layout from "@layouts/Layout.astro";
 import homeHero from "../assets/heroes/temphero.png";
 ---
 
-<Layout>
+<Layout
+  showHero={true}
+  showNewsStrip={true}
+  newsMessage="Malue is moving from research and validation towards commercial deployment, with adoption support at the centre of its platform model."
+  newsLinkText="Read more"
+  newsHref="#"
+  heroTitle="Helping healthcare adopt what works"
+  heroImage={homeHero}
+>
   <p>blurb</p>
 </Layout>
